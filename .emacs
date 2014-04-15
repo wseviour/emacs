@@ -63,13 +63,13 @@
 (require 'latex-settings)
 
 ;; SCSS Mode
-(require 'scss-settings)
+;; (require 'scss-settings)
 
 ;; Matlab mode
-(require 'matlab-settings)
+;; (require 'matlab-settings)
 
 ;; Nyancat mode!
-(nyan-mode 1)
+;; (nyan-mode 1)
 
 
 ;---------------------------------------------------------------------
