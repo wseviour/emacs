@@ -24,6 +24,10 @@
 (include-elget-plugin "popup")
 (require 'popup)
 
+;; Fill column indicator
+(include-elget-plugin "fill-column-indicator")
+(require 'fill-column-indicator)
+
 ;; Websocket
 (include-plugin "websocket")
 (require 'websocket)
