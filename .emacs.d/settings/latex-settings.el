@@ -35,6 +35,8 @@
 (add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (tex-pdf-mode 1)
-            (TeX-source-correlate-mode 1)))
+            (TeX-source-correlate-mode 1)
+            (turn-on-auto-fill)
+            (fci-mode 1)))
 
 (provide 'latex-settings)

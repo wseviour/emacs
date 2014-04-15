@@ -24,10 +24,6 @@
 (include-elget-plugin "popup")
 (require 'popup)
 
-;; Fill column indicator
-(include-elget-plugin "fill-column-indicator")
-(require 'fill-column-indicator)
-
 ;; Websocket
 (include-plugin "websocket")
 (require 'websocket)
@@ -35,6 +31,12 @@
 ;; Request
 (include-plugin "request")
 (require 'request)
+
+;; Fill column indicator
+(require 'fill-column-indicator)
+(setq fci-rule-width 1)
+(setq fci-rule-color "grey20")
+(setq-default fill-column 80)
 
 ;; Auto complete
 (require 'auto-complete-settings)
@@ -49,6 +51,12 @@
 ;-----------;
 ;;; Modes ;;;
 ;-----------;
+
+;; CUA mode 
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 ;; Ido mode
 (require 'ido)

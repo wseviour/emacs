@@ -29,6 +29,7 @@
                nyan-mode
                helm
                helm-descbinds
+               fill-column-indicator
                ))   
 
 ; first enable shallow clone, so we don't need to clone the entire

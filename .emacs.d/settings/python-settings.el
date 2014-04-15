@@ -54,6 +54,12 @@
   (ein:notebooklist-open))
 
 
+; turn on linenumbers and fill column indicator
+(defun my-python-mode-hook () 
+  (linum-mode 1)
+  (fci-mode 1)) 
+(add-hook 'python-mode-hook 'my-python-mode-hook) 
+
 ;; ------------------
 ;; misc python config
 ;; ------------------
@@ -72,8 +78,8 @@
 ;; (autoload 'jedi:setup "jedi" nil t)
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 
-;; pyflakes flymake integration
-;; http://stackoverflow.com/a/1257306/347942
+;; ; pyflakes flymake integration
+;; ; http://stackoverflow.com/a/1257306/347942
 ;; (when (load "flymake" t)
 ;;  (defun flymake-pyflakes-init ()
 ;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
