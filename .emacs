@@ -1,3 +1,8 @@
+;; Fix cl-lib for emacs 23
+;; http://stackoverflow.com/questions/20678847/cannot-load-cl-lib-at-emacs-startup
+(add-to-list 'load-path "~/.emacs.d/cl-lib/")
+(require 'cl-lib)
+
 ;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
 ;; path to where plugins are kept
@@ -91,13 +96,5 @@
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
  
-;; Require Common Lisp. (cl in <=24.2, cl-lib in >=24.3.) 
-;; http://williamjohnbert.com/2013/05/emacs-cl-lib-madness/
-(if (require 'cl-lib nil t)
- (progn
-   (defalias 'cl-block-wrapper 'identity)
-   (defalias 'member* 'cl-member)
-   (defalias 'adjoin 'cl-adjoin))
- ;; Else we're on an older version so require cl.
- (require 'cl))
+
  
