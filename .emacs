@@ -50,7 +50,7 @@
 (require 'camelcase-settings)
 
 ;; Helm
-(require 'helm-settings)
+;; (require 'helm-settings)
 
 
 ;-----------;
