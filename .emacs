@@ -1,7 +1,7 @@
 ;; Fix cl-lib for emacs 23
 ;; http://stackoverflow.com/questions/20678847/cannot-load-cl-lib-at-emacs-startup
-(add-to-list 'load-path "~/.emacs.d/cl-lib/")
-(require 'cl-lib)
+;; (add-to-list 'load-path "~/.emacs.d/cl-lib/")
+;; (require 'cl-lib)
 
 ;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
@@ -50,7 +50,7 @@
 (require 'camelcase-settings)
 
 ;; Helm
-;; (require 'helm-settings)
+(require 'helm-settings)
 
 
 ;-----------;
