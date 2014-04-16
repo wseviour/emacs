@@ -11,6 +11,11 @@
 ;; (load-theme 'solarized-dark 1)
 ;; (setq solarized-termcolors 256)
 
+(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
+(require 'color-theme-solarized)
+
+
+
 (require 'faces)
 (if (system-is-mac)
     (set-face-attribute 'default nil
