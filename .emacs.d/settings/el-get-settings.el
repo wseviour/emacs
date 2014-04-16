@@ -24,7 +24,6 @@
                markdown-mode
                matlab-mode
                nxhtml
-               pydoc-info
                scss-mode
                popup
                jedi
