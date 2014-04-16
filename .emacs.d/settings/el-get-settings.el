@@ -20,7 +20,6 @@
  my-packages '(auctex
                auto-complete
                ein
-               magit
                markdown-mode
                matlab-mode
                nxhtml
