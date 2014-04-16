@@ -17,6 +17,10 @@
 ;; install dependencies with el-get
 (require 'el-get-settings)
 
+;; use shift+arrow to move windows
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
+
 ;---------------;
 ;;; Utilities ;;;
 ;---------------;
