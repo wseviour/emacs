@@ -90,3 +90,14 @@
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
+ 
+;; Require Common Lisp. (cl in <=24.2, cl-lib in >=24.3.) 
+;; http://williamjohnbert.com/2013/05/emacs-cl-lib-madness/
+(if (require 'cl-lib nil t)
+ (progn
+   (defalias 'cl-block-wrapper 'identity)
+   (defalias 'member* 'cl-member)
+   (defalias 'adjoin 'cl-adjoin))
+ ;; Else we're on an older version so require cl.
+ (require 'cl))
+ 
