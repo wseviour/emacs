@@ -17,6 +17,10 @@
 ;; install dependencies with el-get
 (require 'el-get-settings)
 
+;; set windmove keybindings
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
+
 ;---------------;
 ;;; Utilities ;;;
 ;---------------;
