@@ -27,8 +27,6 @@
                popup
                jedi
                nyan-mode
-               helm
-               helm-descbinds
                fill-column-indicator
                ))   
 
