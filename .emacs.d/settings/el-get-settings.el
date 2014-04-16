@@ -19,7 +19,6 @@
 (setq 
  my-packages '(auctex
                auto-complete
-               color-theme-solarized
                ein
                magit
                markdown-mode
