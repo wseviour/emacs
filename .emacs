@@ -41,7 +41,7 @@
 (include-plugin "request")
 (require 'request)
 
-<<<<<<< HEAD
+
 ;; yasnippet
 (require 'yasnippet-settings)
 =======
@@ -50,7 +50,6 @@
 (setq fci-rule-width 1)
 (setq fci-rule-color "grey20")
 (setq-default fill-column 80)
->>>>>>> fdff3263c4c8fa7570f387256f76b81bd27acbb8
 
 ;; Auto complete
 (require 'auto-complete-settings)

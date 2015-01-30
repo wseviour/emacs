@@ -26,15 +26,12 @@
                popup
                jedi
                nyan-mode
-<<<<<<< HEAD
                helm
                helm-descbinds
                js2-mode
                yasnippet
-=======
                fill-column-indicator
                color-theme
->>>>>>> fdff3263c4c8fa7570f387256f76b81bd27acbb8
                ))   
 
 ; first enable shallow clone, so we don't need to clone the entire
