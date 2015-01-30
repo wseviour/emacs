@@ -26,7 +26,7 @@
       (setq TeX-view-program-selection 
 	     (quote (((output-dvi style-pstricks) "dvips and gv") 
 		     (output-dvi "xdvi") 
-		     (output-pdf "evince")
+		     (output-pdf "Evince")
 		     (output-html "xdg-open"))))))
 
 ; always start the server for inverse search
@@ -35,6 +35,12 @@
 (add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (tex-pdf-mode 1)
-            (TeX-source-correlate-mode 1)))
+            (TeX-source-correlate-mode 1)
+            (turn-on-auto-fill)
+            (fci-mode 1)
+            (turn-on-reftex)))
+
+; make default natbib citations
+(setq reftex-cite-format 'natbib)
 
 (provide 'latex-settings)

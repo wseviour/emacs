@@ -1,3 +1,8 @@
+;; Fix cl-lib for emacs 23
+;; http://stackoverflow.com/questions/20678847/cannot-load-cl-lib-at-emacs-startup
+(add-to-list 'load-path "~/.emacs.d/cl-lib/")
+(require 'cl-lib)
+
 ;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
 ;; path to where plugins are kept
@@ -12,13 +17,17 @@
 ;; install dependencies with el-get
 (require 'el-get-settings)
 
+;; set windmove keybindings
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
+
 ;---------------;
 ;;; Utilities ;;;
 ;---------------;
 
 ;; Git
-(include-plugin "magit")
-(require 'magit)
+;; (include-plugin "magit")
+;; (require 'magit)
 
 ;; Popup
 (include-elget-plugin "popup")
@@ -32,8 +41,16 @@
 (include-plugin "request")
 (require 'request)
 
+<<<<<<< HEAD
 ;; yasnippet
 (require 'yasnippet-settings)
+=======
+;; Fill column indicator
+(require 'fill-column-indicator)
+(setq fci-rule-width 1)
+(setq fci-rule-color "grey20")
+(setq-default fill-column 80)
+>>>>>>> fdff3263c4c8fa7570f387256f76b81bd27acbb8
 
 ;; Auto complete
 (require 'auto-complete-settings)
@@ -42,12 +59,18 @@
 (require 'camelcase-settings)
 
 ;; Helm
-(require 'helm-settings)
+;; (require 'helm-settings)
 
 
 ;-----------;
 ;;; Modes ;;;
 ;-----------;
+
+;; CUA mode 
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 ;; Ido mode
 (require 'ido)
@@ -66,16 +89,16 @@
 (require 'latex-settings)
 
 ;; SCSS Mode
-(require 'scss-settings)
+;; (require 'scss-settings)
 
 ;; Matlab mode
-(require 'matlab-settings)
+;; (require 'matlab-settings)
 
 ;; Javascript
 (require 'js-settings)
 
 ;; Nyancat mode!
-(nyan-mode 1)
+;; (nyan-mode 1)
 
 
 ;---------------------------------------------------------------------
@@ -84,3 +107,6 @@
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
+ 
+
+ 

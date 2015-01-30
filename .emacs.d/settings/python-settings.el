@@ -54,13 +54,19 @@
   (ein:notebooklist-open))
 
 
+; turn on linenumbers and fill column indicator
+(defun my-python-mode-hook () 
+  (linum-mode 1)
+  (fci-mode 1)) 
+(add-hook 'python-mode-hook 'my-python-mode-hook) 
+
 ;; ------------------
 ;; misc python config
 ;; ------------------
 
-; pydoc info
-(include-plugin "pydoc-info-0.2")
-(require 'pydoc-info)
+;; ; pydoc info
+;;(include-plugin "pydoc-info-0.2")
+;;(require 'pydoc-info)
 
 ;; ; jedi python completion
 ;; (include-elget-plugin "ctable")   ; required for epc
@@ -72,21 +78,21 @@
 ;; (autoload 'jedi:setup "jedi" nil t)
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 
-;; pyflakes flymake integration
-;; http://stackoverflow.com/a/1257306/347942
-(when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-      (list "pycheckers" (list local-file))))
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pyflakes-init)))
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
+;; ; pyflakes flymake integration
+;; ; http://stackoverflow.com/a/1257306/347942
+;; (when (load "flymake" t)
+;;  (defun flymake-pyflakes-init ()
+;;    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;;                       'flymake-create-temp-inplace))
+;;           (local-file (file-relative-name
+;;                        temp-file
+;;                        (file-name-directory buffer-file-name))))
+;;      (list "pycheckers" (list local-file))))
+;;  (add-to-list 'flymake-allowed-file-name-masks
+;;               '("\\.py\\'" flymake-pyflakes-init)))
+;; (add-hook 'python-mode-hook
+;;	  (lambda ()
+;;	    (unless (eq buffer-file-name nil) (flymake-mode 1))))
 
 ; Set PYTHONPATH, because we don't load .bashrc
 (defun set-python-path-from-shell-PYTHONPATH ()

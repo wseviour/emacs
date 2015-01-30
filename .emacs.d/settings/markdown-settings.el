@@ -13,4 +13,10 @@
 	     )
        auto-mode-alist))
 
+(add-hook 'markdown-mode-hook
+	  (lambda ()
+	    (turn-on-auto-fill)
+            (fci-mode 1)))
+
+
 (provide 'markdown-settings)
