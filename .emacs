@@ -1,7 +1,7 @@
 ;; Fix cl-lib for emacs 23
 ;; http://stackoverflow.com/questions/20678847/cannot-load-cl-lib-at-emacs-startup
-(add-to-list 'load-path "~/.emacs.d/cl-lib/")
-(require 'cl-lib)
+;;(add-to-list 'load-path "~/.emacs.d/cl-lib/")
+;;(require 'cl-lib)
 
 ;; path where settings files are kept
 (add-to-list 'load-path "~/.emacs.d/settings")
@@ -26,8 +26,8 @@
 ;---------------;
 
 ;; Git
-;; (include-plugin "magit")
-;; (require 'magit)
+(include-plugin "magit")
+(require 'magit)
 
 ;; Popup
 (include-elget-plugin "popup")
@@ -41,9 +41,9 @@
 (include-plugin "request")
 (require 'request)
 
-
 ;; yasnippet
 (require 'yasnippet-settings)
+
 ;; Fill column indicator
 (require 'fill-column-indicator)
 (setq fci-rule-width 1)
@@ -57,7 +57,7 @@
 (require 'camelcase-settings)
 
 ;; Helm
-;; (require 'helm-settings)
+(require 'helm-settings)
 
 
 ;-----------;
@@ -65,10 +65,10 @@
 ;-----------;
 
 ;; CUA mode 
-(cua-mode t)
-(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-(transient-mark-mode 1) ;; No region when it is not highlighted
-(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+;; (cua-mode t)
+;; (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+;; (transient-mark-mode 1) ;; No region when it is not highlighted
+;; (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
 ;; Ido mode
 (require 'ido)

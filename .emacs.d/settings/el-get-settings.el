@@ -12,16 +12,19 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
+;(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+;(el-get 'sync)
 
 ; packages to install
 (setq 
  my-packages '(auctex
                auto-complete
+	       color-theme-solarized
                ein
+	       magit
                markdown-mode
                nxhtml
+	       pydoc-info
                scss-mode
                popup
                jedi
@@ -31,7 +34,6 @@
                js2-mode
                yasnippet
                fill-column-indicator
-               color-theme
                ))   
 
 ; first enable shallow clone, so we don't need to clone the entire

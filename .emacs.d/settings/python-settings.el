@@ -64,9 +64,9 @@
 ;; misc python config
 ;; ------------------
 
-;; ; pydoc info
-;;(include-plugin "pydoc-info-0.2")
-;;(require 'pydoc-info)
+; pydoc info
+(include-plugin "pydoc-info-0.2")
+(require 'pydoc-info)
 
 ;; ; jedi python completion
 ;; (include-elget-plugin "ctable")   ; required for epc
