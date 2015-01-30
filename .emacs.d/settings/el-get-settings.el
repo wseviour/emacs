@@ -21,7 +21,6 @@
                auto-complete
                ein
                markdown-mode
-               matlab-mode
                nxhtml
                scss-mode
                popup
