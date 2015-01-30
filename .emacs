@@ -99,6 +99,11 @@
 ;; (nyan-mode 1)
 
 
+(setq mac-option-modifier 'super )
+(setq mac-command-modifier 'meta )
+(define-key global-map [home] 'beginning-of-line)
+(define-key global-map [end] 'end-of-line)
+
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like
 ;; custom-set-faces and custom-set-variables)
