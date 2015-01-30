@@ -44,7 +44,6 @@
 
 ;; yasnippet
 (require 'yasnippet-settings)
-=======
 ;; Fill column indicator
 (require 'fill-column-indicator)
 (setq fci-rule-width 1)
