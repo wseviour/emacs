@@ -42,7 +42,7 @@
 (require 'request)
 
 ;; yasnippet
-(require 'yasnippet-settings)
+;; (require 'yasnippet-settings)
 
 ;; Fill column indicator
 (require 'fill-column-indicator)
@@ -93,12 +93,12 @@
 ;; (require 'matlab-settings)
 
 ;; Javascript
-(require 'js-settings)
+;; (require 'js-settings)
 
 ;; Nyancat mode!
 ;; (nyan-mode 1)
 
-
+;; Settings for mac keys
 (setq mac-option-modifier 'super )
 (setq mac-command-modifier 'meta )
 (define-key global-map [home] 'beginning-of-line)
