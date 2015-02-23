@@ -12,6 +12,8 @@
 
 (add-hook 'org-mode-hook 'org-mode-reftex-setup)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
-(add-hook 'org-mode-hook (fci-mode 1))
+(add-hook 'org-mode-hook
+          (lambda ()
+            (fci-mode 1)))
 
 (provide 'org-mode-settings)
