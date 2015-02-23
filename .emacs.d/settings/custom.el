@@ -15,7 +15,7 @@
 (if (system-is-mac)
     (set-face-attribute 'default nil
 			:foundry "apple" 
-			:family "Consolas"))
+			:family "DejaVu_Sans_Mono"))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
