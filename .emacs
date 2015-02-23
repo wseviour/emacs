@@ -86,6 +86,9 @@
 ;; LaTeX and Auctex
 (require 'latex-settings)
 
+;; Org-mode
+(require 'org-mode-settings)
+
 ;; SCSS Mode
 ;; (require 'scss-settings)
 
@@ -110,6 +113,18 @@
 (load 
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
- 
 
- 
+;; Fix for latex from http://tex.stackexchange.com/questions/24510/pdflatex-fails-within-emacs-app-but-works-in-terminal
+(getenv "PATH")
+ (setenv "PATH"
+(concat
+ "/usr/texbin" ":" 
+(getenv "PATH")))
+
+;; Set up default bibliography
+(setq reftex-default-bibliography
+        '("/Users/Will/Documents/bibtex/library.bib"))
+
+           
+
+
