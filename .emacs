@@ -101,11 +101,7 @@
 ;; Nyancat mode!
 ;; (nyan-mode 1)
 
-;; Settings for mac keys
-(setq mac-option-modifier 'super )
-(setq mac-command-modifier 'meta )
-(define-key global-map [home] 'beginning-of-line)
-(define-key global-map [end] 'end-of-line)
+
 
 ;---------------------------------------------------------------------
 ;; Put auto 'custom' changes in a separate file (this is stuff like
@@ -114,16 +110,7 @@
  (setq custom-file (expand-file-name "settings/custom.el" user-emacs-directory))
  'noerror)
 
-;; Fix for latex from http://tex.stackexchange.com/questions/24510/pdflatex-fails-within-emacs-app-but-works-in-terminal
-(getenv "PATH")
- (setenv "PATH"
-(concat
- "/usr/texbin" ":" 
-(getenv "PATH")))
 
-;; Set up default bibliography
-(setq reftex-default-bibliography
-        '("/Users/Will/Documents/bibtex/library.bib"))
 
            
 

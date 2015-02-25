@@ -18,7 +18,7 @@
 ; don't show the startup screen
 (setq inhibit-startup-screen 1)
 ; don't show the menu bar
-(menu-bar-mode 0)
+; (menu-bar-mode 0)
 ; don't show the tool bar
 (require 'tool-bar)
 (tool-bar-mode 0)
@@ -56,10 +56,16 @@
 ;; (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 ; make end and home keys go to the start/end of buffers
-(global-set-key (kbd "<end>") 'end-of-buffer)
-(global-set-key (kbd "<home>") 'beginning-of-buffer)
-(define-key input-decode-map "\e[1;5A" [C-up])
-(define-key input-decode-map "\e[1;5B" [C-down])
+;(global-set-key (kbd "<end>") 'end-of-buffer)
+;(global-set-key (kbd "<home>") 'beginning-of-buffer)
+;(define-key input-decode-map "\e[1;5A" [C-up])
+;(define-key input-decode-map "\e[1;5B" [C-down])
+
+;; Settings for mac keys
+(setq mac-option-modifier 'super )
+(setq mac-command-modifier 'meta )
+(define-key global-map [home] 'beginning-of-line)
+(define-key global-map [end] 'end-of-line)
 
 ; always use spaces, not tabs, when indenting
 (setq-default indent-tabs-mode nil)
@@ -113,5 +119,16 @@
 (setq backup-inhibited t)
 ; disable auto save
 (setq auto-save-default nil)
+
+;; Fix for latex from http://tex.stackexchange.com/questions/24510/pdflatex-fails-within-emacs-app-but-works-in-terminal
+(getenv "PATH")
+ (setenv "PATH"
+(concat
+ "/usr/texbin" ":" 
+(getenv "PATH")))
+
+;; Set up default bibliography
+(setq reftex-default-bibliography
+        '("/Users/Will/Documents/bibtex/library.bib"))
 
 (provide 'general-settings)
