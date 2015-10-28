@@ -93,7 +93,7 @@
 ;; (require 'scss-settings)
 
 ;; Matlab mode
-(require 'matlab-settings)
+;; (require 'matlab-settings)
 
 ;; Javascript
 ;; (require 'js-settings)
@@ -111,6 +111,11 @@
  'noerror)
 
 
+; Octave mode for Matlab
+(setq auto-mode-alist
+      (cons
+       '("\\.m$" . octave-mode)
+              auto-mode-alist))
 
            
 

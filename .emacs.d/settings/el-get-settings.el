@@ -34,8 +34,7 @@
                js2-mode
                yasnippet
                fill-column-indicator
-	       matlab-mode
-               ))   
+	       ))   
 
 ; first enable shallow clone, so we don't need to clone the entire
 ; history of every project
